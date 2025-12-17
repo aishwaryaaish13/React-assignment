@@ -6,7 +6,8 @@ import Counter from './counter.jsx'
 import Calculator from './Calculator.jsx'
 import MessageCard from './MessageCard.jsx'
 import UserProfile from './UserProfile.jsx'
-
+import UserData from './UserData.jsx'
+import CounterWithAlert from './CounterWithAlert.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -38,6 +39,8 @@ function App() {
         message="Props help pass data from parent to child components."
       />
       <UserProfile />
+      <UserData />
+      <CounterWithAlert />
     </>
   )
 }
