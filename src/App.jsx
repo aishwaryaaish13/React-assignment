@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+
 import FirstComponent from './FirstComponent'
 import MainPage from './MainPage'
 import Counter from './counter.jsx'
@@ -8,8 +9,21 @@ import MessageCard from './MessageCard.jsx'
 import UserProfile from './UserProfile.jsx'
 import UserData from './UserData.jsx'
 import CounterWithAlert from './CounterWithAlert.jsx'
+import ColorToggle from './ColorToggle.jsx'
+
+import ComponentA from './ComponentA'
+import ComponentB from './ComponentB'
+
 function App() {
+
   const [count, setCount] = useState(0)
+
+
+  const [status, setStatus] = useState(false)
+
+  const toggleStatus = () => {
+    setStatus(prev => !prev)
+  }
 
   return (
     <>
@@ -23,24 +37,31 @@ function App() {
       <Calculator />
 
       <h2>Message Cards</h2>
-
       <MessageCard
         title="Welcome"
         message="Welcome to learning React components and props."
       />
-
       <MessageCard
         title="Reminder"
         message="Reuse components to keep your code clean."
       />
-
       <MessageCard
         title="Tip"
         message="Props help pass data from parent to child components."
       />
+
       <UserProfile />
       <UserData />
       <CounterWithAlert />
+
+      
+      <h2>Status Toggle</h2>
+      <button onClick={toggleStatus}>Toggle Status</button>
+      {status ? <ComponentA /> : <ComponentB />}
+
+    
+      <h2>Color Toggle</h2>
+      <ColorToggle />
     </>
   )
 }
