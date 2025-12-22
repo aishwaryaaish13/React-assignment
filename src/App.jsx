@@ -13,6 +13,7 @@ import ColorToggle from './ColorToggle.jsx'
 
 import ComponentA from './ComponentA'
 import ComponentB from './ComponentB'
+import VideoPlayerMulti from './VideoPlayerMulti.jsx'
 
 function App() {
 
@@ -62,6 +63,7 @@ function App() {
     
       <h2>Color Toggle</h2>
       <ColorToggle />
+      <VideoPlayerMulti />
     </>
   )
 }
