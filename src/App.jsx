@@ -15,6 +15,8 @@ import ComponentA from './ComponentA'
 import ComponentB from './ComponentB'
 import VideoPlayerMulti from './VideoPlayerMulti.jsx'
 import Component1 from './PropDrilling/Component1.jsx'
+import Component1 from './components/Component3.jsx'
+import Todos from './components/Todos.jsx'
 
 function App() {
 
@@ -66,6 +68,10 @@ function App() {
       <ColorToggle />
       <VideoPlayerMulti />
       <Component1 />
+      <h1>Context API – Props Drilling Solution</h1>
+      <Component1 />
+      <h1>Context API Todo App</h1>
+      <Todos />
     </>
   )
 }
