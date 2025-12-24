@@ -72,6 +72,14 @@ function App() {
       <Component1 />
       <h1>Context API Todo App</h1>
       <Todos />
+      <Navbar />
+
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/todos" element={<Todos />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
   )
 }
